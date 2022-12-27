@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: -apple-system;
   background: var(--color-bg-variant);
   color: var(--color-white);
   line-height: 1, 7;
