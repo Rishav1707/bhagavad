@@ -36,27 +36,42 @@ const Nav = () => {
         <h1>{<TypingEffect />}</h1>
       </div>
 
-      <ul className="nav-links">
-        <input type="checkbox" id="check" />
-        <label htmlFor="check" className="checkbtn">
-          &#9776;
-        </label>
+      <div className='nav-a'>
+        <ul className="nav-links">
+          <input type="checkbox" id="check" />
+          <label htmlFor="check" className="checkbtn">
+            &#9776;
+          </label>
 
-        <div className="menu">
-          <li>
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#about">Search</a>
-          </li>
-          <li>
-            <a href="#skills">Skills</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-        </div>
-      </ul>
+          <div className="menu">
+            <li>
+              <a className="nav_btn" href="#home">
+                || <span>Home</span> ||
+              </a>
+            </li>
+            <li>
+              <a className="nav_btn" href="#search">
+                || <span>Search</span> ||
+              </a>
+            </li>
+            <li>
+              <a className="nav_btn" href="#Books">
+                || <span>Books</span> ||
+              </a>
+            </li>
+            <li>
+              <a className="nav_btn" href="#chapter">
+                || <span>Chapter</span> ||
+              </a>
+            </li>
+            <li>
+              <a className="nav_btn" href="#contact">
+                || <span>Contact</span> ||
+              </a>
+            </li>
+          </div>
+        </ul>
+      </div>
     </nav>
   );
 }
