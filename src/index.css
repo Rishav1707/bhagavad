@@ -1,4 +1,45 @@
 body {
   margin: 0;
   padding: 0;
+  background: var(--color-bg-variant);
+  color: var(--color-white);
+  line-height: 1, 7;
+  background-image: url("./assets/texture2.png");
+  /* https://www.transparenttextures.com/ */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  min-height: 100%;
+  width: 100vw;
+}
+
+/* Font faces  */
+@font-face {
+  font-family: "dev";
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@100;200;300;400;500;600&display=swap");
+}
+
+:root {
+  --color-bg: #242a30;
+  --color-bg-variant: #171b1e;
+  --color-primary: #e1cfbe;
+  --color-primary-variant: #e4d9cb;
+  --color-white: #ffffff;
+  --color-gray: #33383d;
+  --color-neon: #64ffda;
+
+  --transition: all 400ms ease;
+
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-ms: 90%;
 }
