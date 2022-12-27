@@ -1,10 +1,12 @@
 import '../styles/app.css';
+import Home from './Home';
 import Nav from './Nav';
 
 function App() {
   return (
     <>
       <Nav />
+      <Home />
     </>
   );
 }

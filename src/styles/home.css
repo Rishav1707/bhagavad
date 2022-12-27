@@ -1,0 +1,96 @@
+.content-container {
+  /* position: absolute; */
+  /* left: 50%; */
+  /* top: 50%; */
+  /* transform: translate(-50%, -50%); */
+  height: 75%;
+  width: 80%;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid var(--color-neon);
+  box-shadow: 10px 10px 5px var(--color-safron);
+}
+
+.content {
+  position: relative;
+  /* top: 50%; */
+  /* transform: translatey(-50%); */
+  text-align: center;
+  padding: 40px;
+}
+
+.content h1 {
+  font-size: 2rem;
+  color: var(--color-white);
+  margin-bottom: 1rem;
+  text-shadow: 1.5px 1.5px 0.75px var(--color-safron);
+  font-weight: bolder;
+}
+
+.content h2 {
+  font-weight: lighter;
+  color: var(--color-white);
+}
+
+.content h3 {
+  font-weight: lighter;
+  color: var(--color-white);
+}
+
+.controls {
+  /* text-align: center; */
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  position: relative;
+  bottom: 0.5rem;
+}
+
+.control {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 75%;
+}
+
+.component {
+  display: flex;
+  word-spacing: 0.12rem;
+  justify-content: space-around;
+  align-items: center;
+}
+code {
+  margin-top: 2.5rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  gap: 1rem;
+  border: 1px solid var(--color-neon);
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1rem;
+}
+
+label {
+  letter-spacing: 0.1rem;
+  gap: 1rem;
+  word-spacing: 1rem;
+  color: var(--color-white);
+  font-size: 1rem;
+}
