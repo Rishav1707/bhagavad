@@ -13,14 +13,11 @@ nav {
   background: transparent;
   backdrop-filter: blur(20px);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  /* filter: none !important;
-  pointer-events: auto !important;
-  user-select: auto !important; */
   border-bottom: 1px solid var(--color-neon);
 }
 
 .nav-text {
-  font-size: 28px;
+  font-size: 18px;
   font-family: "dev";
   font-weight: 200;
   font-style: italic;
@@ -28,7 +25,7 @@ nav {
 }
 
 .nav-text:hover {
-  color: #e78849;
+  color: var(--color-safron);
 }
 
 .nav-a {
@@ -60,11 +57,9 @@ input[type="checkbox"] {
 .menu {
   display: flex;
   flex-direction: row;
-  /* justify-content: space-between; */
   align-items: center;
   width: 100%;
   height: 100%;
-  /* padding: 0px 50px; */
   background: transparent;
   backdrop-filter: blur(20px);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -73,6 +68,7 @@ input[type="checkbox"] {
 }
 
 .menu .nav_btn {
+  text-decoration: none;
   display: flex;
   gap: 0.75rem;
   padding: 8px 12px;
