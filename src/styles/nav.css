@@ -80,3 +80,91 @@ input[type="checkbox"] {
   border-color: #0a4447;
   opacity: 55%;
 }
+
+/* ==================== MEDIA QUERIES (Medium & small DEVICES) ==================== */
+@media screen and (max-width: 1024px) {
+  nav {
+    background-color: var(--color-bg);
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: var(--color-bg);
+    /* background-color:teal; */
+    height: 100vh;
+    right: 0;
+    font-size: larger;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+    top: 69px;
+  }
+
+  .menu li {
+    margin: 12px 0;
+  }
+
+  .menu li:hover {
+    color: var(--color-neon);
+  }
+
+  .nav_btn {
+    justify-content: center;
+    margin-top: 2rem;
+    margin-left: 40%;
+    margin-right: 40%;
+  }
+
+  .menu li + li {
+    margin-top: 12px;
+  }
+
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+
+  .checkbtn {
+    display: block;
+    cursor: pointer;
+    font-size: 2.5rem;
+  }
+
+  .checkbtn.active > span {
+    transform: rotate(-45deg) translateY(7px) translateX(-5px);
+    transition: 0.25s linear all;
+  }
+
+  .checkbtn.active::before {
+    transition: 0.25s linear all;
+    transform: rotate(45deg) translateY(-7px) translateX(-5px);
+  }
+
+  .checkbtn.active::after {
+    transform: translateX(-15px);
+    opacity: 0;
+    transition: 0.25s linear all;
+  }
+}
+
+@media screen and (max-width: 641px) {
+  nav {
+    padding: 0 30px;
+  }
+
+  .nav_btn {
+    margin-left: 35%;
+    margin-right: 35%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  nav {
+    padding: 0 20px;
+  }
+
+  .nav_btn {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+}
