@@ -30,6 +30,40 @@ const Home = () => {
       });
   }
 
+  function nextVerse() {
+    if (verse < 78) {
+      setVerse(parseInt(verse) + 1);
+    } else {
+      setVerse(1);
+      if (chapter < 18) {
+        setChapter(parseInt(chapter) + 1);
+      } else {
+        setChapter(1);
+      }
+    }
+    getVerse();
+  }
+
+  function prevVerse() {
+    if (verse > 1) {
+      setVerse(parseInt(verse) - 1);
+    } else {
+      setVerse(78);
+      if (chapter > 1) {
+        setChapter(parseInt(chapter) - 1);
+      } else {
+        setChapter(18);
+      }
+    }
+    getVerse();
+  }
+
+  function randomVerse() {
+    setChapter(Math.floor(Math.random() * 18) + 1);
+    setVerse(Math.floor(Math.random() * 78) + 1);
+    getVerse();
+  }
+
   return (
     <section>
       <div className="container content-container">
@@ -68,67 +102,30 @@ const Home = () => {
           </div>
           <br />
           <div className="buttons">
-            <a
-              onClick={() => {
-                if (chapter > 1 && verse > 1) {
-                  setChapter(chapter - 1);
-                  setVerse(verse - 1);
-                  getVerse();
-                }
-              }}
-              href={() => {
-                return false;
-              }}
-              className="btn"
-            >
+            <a onClick={prevVerse} className="btn" href="#0">
               Previous
             </a>
-            <a
-              href={() => {
-                return false;
-              }}
-              onClick={getVerse}
-              className="btn"
-            >
-              Get Verse
+            <a onClick={getVerse} className="btn" href="#0">
+              Get verse
             </a>
-            <a
-              onClick={() => {
-                setChapter(Math.floor(Math.random() * 18) + 1);
-                setVerse(Math.floor(Math.random() * 20) + 1);
-                getVerse();
-              }}
-              href={() => {
-                return false;
-              }}
-              className="btn"
-            >
+            <a onClick={randomVerse} className="btn" href="#0">
               Random
             </a>
             <a
               href={`https://bhagavadgitaapi.in/slok/${chapter}/${verse}/gita.svg`}
               target="_blank"
-              download={`gita-${chapter}-${verse}.svg`}
-              className="btn"
               rel="noreferrer"
-            >
-              Get SVG
-            </a>
-            <a
-              onClick={() => {
-                setChapter(chapter + 1);
-                setVerse(verse + 1);
-                getVerse();
-              }}
-              href={() => {
-                return false;
-              }}
               className="btn"
             >
+              Get Svg
+            </a>
+            <a onClick={nextVerse} className="btn" href="#0">
               Next
             </a>
           </div>
-          <code>(Bhagavad Gita, Chapter {chapter}, Shloka {verse})</code>
+          <code>
+            (Bhagavad Gita, Chapter {chapter}, Shloka {verse})
+          </code>
         </div>
       </div>
     </section>
