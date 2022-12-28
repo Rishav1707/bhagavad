@@ -60,7 +60,7 @@ const Home = () => {
 
   function randomVerse() {
     setChapter(Math.floor(Math.random() * 18) + 1);
-    setVerse(Math.floor(Math.random() * 78) + 1);
+    setVerse(Math.floor(Math.random() * 22) + 1);
     getVerse();
   }
 
