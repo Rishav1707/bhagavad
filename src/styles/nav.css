@@ -147,20 +147,69 @@ input[type="checkbox"] {
   }
 }
 
-@media screen and (max-width: 641px) {
+@media screen and (max-width: 768px) {
   nav {
-    padding: 0 30px;
+    padding: 0 20px;
+  }
+
+  .nav-text {
+    font-size: 20px;
+  }
+
+  .nav-a {
+    width: 15%;
+  }
+
+  .content-container {
+    margin-top: 6rem;
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  code {
+    margin-top: 2.5rem;
+    margin-left: 2px;
+    font-size: 15px;
   }
 
   .nav_btn {
-    margin-left: 35%;
-    margin-right: 35%;
+    margin-left: 30%;
+    margin-right: 30%;
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 600px) {
   nav {
     padding: 0 20px;
+  }
+
+  .nav-text {
+    font-size: 13px;
+  }
+
+  .nav-a {
+    width: 35%;
+  }
+
+  .content-container {
+    margin-top: 6rem;
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-direction: column;
+  }
+
+  code {
+    margin-top: 2.5rem;
+    margin-left: 2px;
+    font-size: 10px;
   }
 
   .nav_btn {
